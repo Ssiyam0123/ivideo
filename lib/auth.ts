@@ -1,5 +1,6 @@
 
 import CredentialsProvider from "next-auth/providers/credentials";
+import GoogleProvider from "next-auth/providers/google";
 
 import { NextAuthOptions } from "next-auth";
 
@@ -70,6 +71,19 @@ export const authOptions: NextAuthOptions = {
         maxAge: 30 * 24 * 60 * 60
       },
       secret: process.env.NEXTAUTH_SECRET,
-    })
+    }),
+
+    // GoogleProvider({
+    //   clientId: process.env.GOOGLE_ID,
+    //   clientSecret: process.env.GOOGLE_SECRET,
+    //   authorization: {
+    //     params: {
+    //       prompt: "consent",
+    //       access_type: "offline",
+    //       response_type: "code"
+    //     }
+    //   },
+      
+    // })
   ]
 }
