@@ -12,12 +12,14 @@
     "@imagekit/next": "^2.1.2",
     "@types/bcryptjs": "^2.4.6",
     "@types/next-auth": "^3.13.0",
+    "axios": "^1.10.0",
     "bcryptjs": "^3.0.2",
     "mongoose": "^8.16.4",
     "next": "15.4.2",
     "next-auth": "^4.24.11",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "react-toastify": "^11.0.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
