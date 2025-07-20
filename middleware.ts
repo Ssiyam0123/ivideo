@@ -11,7 +11,7 @@ export default withAuth(
             authorized({ req, token }) {
                 const { pathname } = req.nextUrl;
                 if (pathname.startsWith("/api/auth") ||
-                    pathname === '/login',
+                    pathname === '/login' ||
                     pathname === '/register'
                 ) return true;
 
@@ -34,6 +34,8 @@ export const config = {
          * - favicon.ico (favicon file)
          * - public folder
          */
-        "/((?!_next/static|_next/image|favicon.ico|public/).*)",
+        '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
+        // Always run for API routes
+        '/(api|trpc)(.*)',
     ],
 };
